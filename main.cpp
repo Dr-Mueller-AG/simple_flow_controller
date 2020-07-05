@@ -12,12 +12,12 @@
 LiquidCrystal_I2C lcd(0x27,20,4);
 
 uint32_t intervalStart;
-uint16_t setPoint = 70;           // 0...1023
-uint16_t flowMeasure = 140;       // 0...1023, 0-20mA
-uint16_t lastflowMeasure = 100;   // 0...1023, 0-20mA
-uint16_t flowRate = 70;           //
-uint8_t iOutRaw = 20;             // 0- 250  (4 ... 20 mA)
-uint8_t iOut;                     // 0-100 %
+uint16_t setPoint = 70;           // 0..1023
+uint16_t flowMeasure = 140;       // 0..1023, 0-20mA
+uint16_t lastflowMeasure = 100;   // 0..1023, 0-20mA
+uint16_t flowRate = 70;           // 0..512 ml/min
+uint8_t iOutRaw = 50;             // 0..250  (0-20 mA)
+uint8_t iOut;                     // 0-100 % (4-20 mA)
 bool outUp = LOW;
 bool outDown = LOW;
 uint16_t loopInterval = 500;      // Controll loop delay
